@@ -6,14 +6,12 @@
             this.make = make;
             this.model = model;
             this.year = year;
-            this.make = make;
-            this.model = model;
-            this.year = year;
         }
         getCarAge() {
             const getYear = new Date().getFullYear();
             const carAge = getYear - this.year;
             console.log(`${carAge} (assuming current year is ${getYear})`);
+            return carAge;
         }
     }
     const car = new Car("Honda", "Civic", 2018);

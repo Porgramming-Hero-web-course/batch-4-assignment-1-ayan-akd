@@ -6,15 +6,12 @@
       public make: string,
       public model: string,
       public year: number
-    ) {
-      this.make = make;
-      this.model = model;
-      this.year = year;
-    }
-    getCarAge() {
+    ) {}
+    getCarAge(): number {
       const getYear = new Date().getFullYear();
       const carAge = getYear - this.year;
       console.log(`${carAge} (assuming current year is ${getYear})`);
+      return carAge;
     }
   }
 

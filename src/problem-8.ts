@@ -6,8 +6,7 @@
     keys: (keyof T)[]
   ): boolean => {
     // console.log(keys);
-    const objKeys = Object.keys(obj);
-    return keys.every((key) => objKeys.includes(key as string));
+    return keys.every((key) => key in obj);
   };
 
   const person = { name: "Alice", age: 25, email: "alice@example.com" };
