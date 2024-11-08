@@ -7,7 +7,7 @@
     email: string;
   }
 
-  const updateProfile = (obj: Profile, update: Partial<Profile>) => {
+  const updateProfile = (obj: Profile, update: Partial<Profile>): object => {
     return { ...obj, ...update };
   };
 
